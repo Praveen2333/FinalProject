@@ -23,7 +23,7 @@
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
             <div class="container">
-                
+                <h1>Online Examination System</h1>
                 <a class="navbar-brand" asp-area="" asp-page="/Index">
                    
                 </a>
@@ -49,23 +49,22 @@
                                    asp-area="Online" asp-controller="QuestionAnswers" asp-action="Index">Questions</a>
                                 <a class="dropdown-item"
                                    asp-area="Online" asp-controller="Results" asp-action="Index">Results</a>
+                                   </div>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">User</a>
                             <div class="dropdown-menu">
                                 <a class="dropdown-item" 
                                    asp-area="Online" asp-controller="Exams" asp-action="Index1">Exams</a>
-                                <a class="dropdown-item"
-                                   asp-area="Online" asp-controller="QuestionAnswers" asp-action="Index1">Questions</a>
+                              
                                 <a class="dropdown-item"
                                    asp-area="Online" asp-controller="Results" asp-action="Index1">Results</a>
+                                   </div>
                         </li>
                        
                         @if(userObj != null) {
                             if(await userManager.IsInRoleAsync(userObj, MyIdentityRoleNames.AppAdmin.ToString())) {
-                                <li class="nav-item">
-                                    <a class="nav-link text-dark" asp-area="Identity" asp-page="/Account/RegisterLibrarian">Register Librarian</a>
-                                </li>
+                               
                             }
                         }
                     </ul>
@@ -85,7 +84,7 @@
 
     <footer class="border-top footer text-muted">
         <div class="container">
-            &copy; 2022 - Manoj Kumar Sharma - 
+            &copy; 2022 - Online Examination System - 
             <a asp-area="" asp-page="/Privacy">Privacy</a>
             &nbsp;|&nbsp; 
             <a href="/swagger">Open API Documentation</a>

@@ -5,13 +5,15 @@
 }
 
 <h1>Exam</h1>
-
+<form asp-area="Online" asp-controller="Results"asp-action="Create" method="post">
 @foreach (var item in Model)
 {
+    var rdoName = "q" + item.QuestionAnswerId;
     <table class="table">
    <tr>
-    <td>@item.QuestionAnswerId ) @item.Question</td>
+    <td>@item.QuestionAnswerId ) @item.Question ?</td>
         </tr>
+           
         <tr>
             <td>
                 <p>
@@ -30,5 +32,5 @@
         </tr>
     </table>
 }
-    
-
+  <button class="btn btn-primary" value="Submit">Submit</button>
+</form>

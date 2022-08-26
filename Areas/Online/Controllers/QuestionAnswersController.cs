@@ -7,14 +7,16 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using LMS.Web.Data;
 using LMS.Web.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace LMS.Web.Areas.Online.Controllers
 {
     [Area("Online")]
+    [Authorize(Roles ="AppAdmin")]
     public class QuestionAnswersController : Controller
     {
         private readonly ApplicationDbContext _context;
-
+       
         public QuestionAnswersController(ApplicationDbContext context)
         {
             _context = context;

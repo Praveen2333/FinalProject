@@ -7,10 +7,13 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using LMS.Web.Data;
 using LMS.Web.Models;
+using Microsoft.AspNetCore.Authorization;
+using System.Data;
 
 namespace LMS.Web.Areas.Online.Controllers
 {
     [Area("Online")]
+    [Authorize(Roles = "AppAdmin")]
     public class ExamsController : Controller
     {
         private readonly ApplicationDbContext _context;
