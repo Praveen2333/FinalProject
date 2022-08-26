@@ -21,8 +21,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Areas\Exam\Controllers\" />
-    <Folder Include="Areas\Exam\ViewModels\" />
+    <Folder Include="Areas\Online\ViewModels\" />
     <Folder Include="wwwroot\imgs\" />
   </ItemGroup>
 

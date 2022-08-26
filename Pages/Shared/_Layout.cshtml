@@ -25,7 +25,7 @@
             <div class="container">
                 
                 <a class="navbar-brand" asp-area="" asp-page="/Index">
-                    <img src="~/imgs/logo.png" style="width:100px" />
+                   
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
@@ -39,40 +39,28 @@
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-page="/Privacy">Privacy</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" 
-                               asp-area="Demos" asp-controller="Employee" asp-action="Index">Employee ViewModel</a>
-                        </li>
+                      
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">Manage</a>
+                            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#"> Admin Manage</a>
                             <div class="dropdown-menu">
                                 <a class="dropdown-item" 
-                                   asp-area="Books" asp-controller="Categories" asp-action="Index">Categories</a>
+                                   asp-area="Online" asp-controller="Exams" asp-action="Index">Exams</a>
                                 <a class="dropdown-item"
-                                   asp-area="Books" asp-controller="Books" asp-action="Index">Books</a>
+                                   asp-area="Online" asp-controller="QuestionAnswers" asp-action="Index">Questions</a>
                                 <a class="dropdown-item"
-                                   asp-area="Books" asp-controller="Authors" asp-action="Index">Authors</a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="~/MyCategoriesApiDemo.html">Categories (API)</a>
-                            </div>
+                                   asp-area="Online" asp-controller="Results" asp-action="Index">Results</a>
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">State Management</a>
+                            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">User</a>
                             <div class="dropdown-menu">
-                                <a class="dropdown-item" asp-area="Demos" asp-controller="TransferData" asp-action="Demo1">
-                                    ViewBag
-                                </a>
-                                <a class="dropdown-item" asp-area="Demos" asp-controller="TransferData" asp-action="Demo2">
-                                    ViewData
-                                </a>
-                                <a class="dropdown-item" asp-area="Demos" asp-controller="TransferData" asp-action="Demo3Step1">
-                                    TempData
-                                </a>
-                                <a class="dropdown-item" asp-area="Demos" asp-controller="TransferData" asp-action="Demo4">
-                                    ViewModel
-                                </a>
-                            </div>
+                                <a class="dropdown-item" 
+                                   asp-area="Online" asp-controller="Exams" asp-action="Index1">Exams</a>
+                                <a class="dropdown-item"
+                                   asp-area="Online" asp-controller="QuestionAnswers" asp-action="Index1">Questions</a>
+                                <a class="dropdown-item"
+                                   asp-area="Online" asp-controller="Results" asp-action="Index1">Results</a>
                         </li>
+                       
                         @if(userObj != null) {
                             if(await userManager.IsInRoleAsync(userObj, MyIdentityRoleNames.AppAdmin.ToString())) {
                                 <li class="nav-item">

@@ -14,9 +14,9 @@ namespace LMS.Web.Data
     public class ApplicationDbContext : IdentityDbContext
     {
 
-        public DbSet<Author> Authors { get; set; }
-        public DbSet<Book> Books { get; set; }
-        public DbSet<Category> Categories { get; set; }
+        public DbSet<Exam> Exams { get; set; }
+        public DbSet<QuestionAnswer> QuestionAnswer { get; set; }
+        public DbSet<Result> Results { get; set; }
 
 
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) 

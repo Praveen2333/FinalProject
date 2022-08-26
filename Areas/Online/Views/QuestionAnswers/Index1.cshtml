@@ -1,0 +1,34 @@
+﻿@model IEnumerable<LMS.Web.Models.QuestionAnswer>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Exam</h1>
+
+@foreach (var item in Model)
+{
+    <table class="table">
+   <tr>
+    <td>@item.QuestionAnswerId ) @item.Question</td>
+        </tr>
+        <tr>
+            <td>
+                <p>
+              <input id="option1" type="radio" name="@item.QuestionAnswerId" class="rb" value="@item.Option1" />@item.Option1
+                </p>
+                <p>
+                <input id="option2" type="radio" name="@item.QuestionAnswerId" class="rb" value="@item.Option2" />@item.Option2
+                </p>
+                <p>
+                <input id="optio3" type="radio" name="@item.QuestionAnswerId" class="rb" value="@item.Option3" />@item.Option3
+                </p>
+                <p>
+                <input id="option4" type="radio" name="@item.QuestionAnswerId" class="rb" value="@item.Option4" />@item.Option4
+                </p>
+            </td> 
+        </tr>
+    </table>
+}
+    
+
