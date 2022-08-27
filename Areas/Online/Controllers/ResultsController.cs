@@ -34,7 +34,12 @@ namespace LMS.Web.Areas.Online.Controllers
         {
             return View(await _context.Results.ToListAsync());
         }
-
+        [HttpPost]
+        public IActionResult ShownAnswer()
+        {
+            var results =this.Request.Form.ToArray();
+            return View();
+        }
         // GET: Online/Results/Details/5
         public async Task<IActionResult> Details(int? id)
         {
