@@ -19,6 +19,18 @@ namespace LMS.Web.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
+            modelBuilder.Entity("LMS.Web.Models.Countvalue", b =>
+                {
+                    b.Property<int>("Count")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.HasKey("Count");
+
+                    b.ToTable("Countvalues");
+                });
+
             modelBuilder.Entity("LMS.Web.Models.Exam", b =>
                 {
                     b.Property<int>("ExamId")

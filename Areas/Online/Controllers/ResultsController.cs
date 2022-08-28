@@ -9,14 +9,24 @@ using LMS.Web.Data;
 using LMS.Web.Models;
 using Microsoft.AspNetCore.Authorization;
 using System.Data;
+using static Microsoft.EntityFrameworkCore.DbLoggerCategory;
+
 
 namespace LMS.Web.Areas.Online.Controllers
 {
     [Area("Online")]
-    [Authorize(Roles = "AppAdmin")]
+
+
     public class ResultsController : Controller
     {
         private readonly ApplicationDbContext _context;
+        public int count;
+        public IActionResult Countvalue(Countvalue countvalue)
+        {
+
+            
+            return View();
+        }
 
         public ResultsController(ApplicationDbContext context)
         {
@@ -28,16 +38,87 @@ namespace LMS.Web.Areas.Online.Controllers
         {
             return View(await _context.Results.ToListAsync());
         }
-
+        public async Task<IActionResult> CorrectAnswer()
+        {
+            return View(await _context.Results.ToListAsync());
+        }
         // GET: Online/Results
         public async Task<IActionResult> Index1()
         {
             return View(await _context.Results.ToListAsync());
         }
+
         [HttpPost]
-        public IActionResult ShownAnswer()
+        [ValidateAntiForgeryToken]
+        public IActionResult ShowAnswer()
         {
-            var results =this.Request.Form.ToArray();
+
+            var answer1 = "Hyper Text Markup Language";
+            var answer2 = "The world wide web Consortium";
+            var answer3 = "2";
+            var answer4 = "closing tag has a/in front";
+            var answer5 = "Break tag";
+            var answer6 = "Opening";
+            var answer7 = "The home page";
+            var answer8 = "Empty element";
+            var answer9 = "<img />";
+            var answer10 = "Quotation marks";
+            var results = this.Request.Form.ToArray();
+            try
+            {
+                if (answer1 == results[0].Value.ToString())
+                {
+                    count = count + 1;
+                }
+                if (answer2 == results[1].Value.ToString())
+                {
+                    count = count + 1;
+                }
+                if (answer3 == results[2].Value.ToString())
+                {
+                    count = count + 1;
+                }
+                if (answer4 == results[3].Value.ToString())
+                {
+                    count = count + 1;
+                }
+                if (answer5 == results[4].Value.ToString())
+                {
+                    count = count + 1;
+                }
+                if (answer6 == results[5].Value.ToString())
+                {
+                    count = count + 1;
+                }
+                if (answer7 == results[6].Value.ToString())
+                {
+                    count = count + 1;
+                }
+                if (answer8 == results[7].Value.ToString())
+                {
+                    count = count + 1;
+                }
+                if (answer9 == results[8].Value.ToString())
+                {
+                    count = count + 1;
+                }
+                if (answer10 == results[9].Value.ToString())
+                {
+                    count = count + 1;
+                }
+                if (count == 8)
+                {
+                    return RedirectToAction("Countvalue");
+                }
+                else
+                {
+                    return View();
+                }
+            }
+            catch (Exception)
+            {
+                Console.WriteLine("Some thing went wrong ");
+            }
             return View();
         }
         // GET: Online/Results/Details/5

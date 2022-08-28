@@ -12,7 +12,7 @@ using Microsoft.AspNetCore.Authorization;
 namespace LMS.Web.Areas.Online.Controllers
 {
     [Area("Online")]
-    [Authorize(Roles ="AppAdmin")]
+   
     public class QuestionAnswersController : Controller
     {
         private readonly ApplicationDbContext _context;

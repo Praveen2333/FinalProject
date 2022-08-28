@@ -6,10 +6,10 @@ namespace LMS.Web.Models
     public class Exam
     {
         public int ExamId { get; set; }
-        [Required]
+        [Required(ErrorMessage = "ExamName cannot be empty!")]
         public string ExamName { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "ExamDescription cannot be empty!")]
         public string ExamDescription { get; set; }
 
         #region Navigation Properties to the Book Model

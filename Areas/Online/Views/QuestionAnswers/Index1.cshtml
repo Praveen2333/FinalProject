@@ -3,9 +3,11 @@
 @{
     ViewData["Title"] = "Index";
 }
+ 
+<h1 style="text-align:center;color:blue"> HTML Exam</h1>
+<h4 style="color:red">There is 10 Questions each question conatins(1 point)</h4>
 
-<h1>Exam</h1>
-<form asp-area="Online" asp-controller="Results"asp-action="Create" method="post">
+<form asp-area="Online" asp-controller="Results" asp-action="ShowAnswer" method="post">
 @foreach (var item in Model)
 {
     var rdoName = "q" + item.QuestionAnswerId;

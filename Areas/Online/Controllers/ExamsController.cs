@@ -13,7 +13,8 @@ using System.Data;
 namespace LMS.Web.Areas.Online.Controllers
 {
     [Area("Online")]
-    [Authorize(Roles = "AppAdmin")]
+   
+
     public class ExamsController : Controller
     {
         private readonly ApplicationDbContext _context;

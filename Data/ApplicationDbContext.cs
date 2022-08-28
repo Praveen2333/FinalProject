@@ -17,7 +17,7 @@ namespace LMS.Web.Data
         public DbSet<Exam> Exams { get; set; }
         public DbSet<QuestionAnswer> QuestionAnswer { get; set; }
         public DbSet<Result> Results { get; set; }
-
+       public DbSet<Countvalue> Countvalues { get; set; }
 
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) 
             : base(options)

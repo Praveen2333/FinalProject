@@ -97,7 +97,7 @@ namespace LMS.Web
                 {
                     Version = "v1",
                     Title = "LMS Web",
-                    Description = "Library Management System - API version 1"
+                    Description = "Online Examination System"
                 });
             });
 
@@ -155,9 +155,9 @@ namespace LMS.Web
 
             });
 
-            // Seed the Database with the System required Roles & User profiles
-            ApplicationDbContextSeed.SeedIdentityRolesAsync(roleManager).Wait();
-            ApplicationDbContextSeed.SeedIdentityUserAsync(userManager).Wait();
+            //// Seed the Database with the System required Roles & User profiles
+            //ApplicationDbContextSeed.SeedIdentityRolesAsync(roleManager).Wait();
+            //ApplicationDbContextSeed.SeedIdentityUserAsync(userManager).Wait();
 
         }
     }
