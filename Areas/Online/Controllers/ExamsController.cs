@@ -13,7 +13,7 @@ using System.Data;
 namespace LMS.Web.Areas.Online.Controllers
 {
     [Area("Online")]
-   
+
 
     public class ExamsController : Controller
     {
@@ -25,12 +25,13 @@ namespace LMS.Web.Areas.Online.Controllers
         }
 
         // GET: Online/Exams
+        [Authorize(Roles = "AppAdmin")]
         public async Task<IActionResult> Index()
         {
             return View(await _context.Exams.ToListAsync());
         }
 
-        // GET: Online/Exams
+    
         public async Task<IActionResult> Index1()
         {
             return View(await _context.Exams.ToListAsync());

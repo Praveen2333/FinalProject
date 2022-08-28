@@ -7,19 +7,27 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using LMS.Web.Data;
 using LMS.Web.Models;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.Extensions.Logging;
+using Microsoft.VisualStudio.Web.CodeGeneration;
 
 namespace LMS.Web.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize(Roles="AppAdmin")]
     public class QuestionAnswersController : ControllerBase
     {
         private readonly ApplicationDbContext _context;
+        private readonly ILogger<QuestionAnswersController> _logger;
 
-        public QuestionAnswersController(ApplicationDbContext context)
+        public QuestionAnswersController(ApplicationDbContext context,
+             ILogger<QuestionAnswersController> logger)
         {
             _context = context;
+            _logger = logger;
         }
+       
 
         // GET: api/QuestionAnswers
         [HttpGet]
@@ -88,7 +96,7 @@ namespace LMS.Web.Controllers
 
         // DELETE: api/QuestionAnswers/5
         [HttpDelete("{id}")]
-        public async Task<ActionResult<QuestionAnswer>> DeleteQuestionAnswer(int id)
+        public async Task<IActionResult> DeleteQuestionAnswer(int id)
         {
             var questionAnswer = await _context.QuestionAnswer.FindAsync(id);
             if (questionAnswer == null)
@@ -99,7 +107,7 @@ namespace LMS.Web.Controllers
             _context.QuestionAnswer.Remove(questionAnswer);
             await _context.SaveChangesAsync();
 
-            return questionAnswer;
+            return (IActionResult)questionAnswer;
         }
 
         private bool QuestionAnswerExists(int id)

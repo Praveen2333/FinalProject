@@ -8,8 +8,6 @@ namespace LMS.Web.Models
         [Display(Name = "Admin Role")]
         AppAdmin,
 
-        [Display(Name = "Librarian")]
-        AppLibrarian,
         
         [Display(Name = "User Role")]
         AppUser

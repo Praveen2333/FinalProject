@@ -156,8 +156,8 @@ namespace LMS.Web
             });
 
             //// Seed the Database with the System required Roles & User profiles
-            //ApplicationDbContextSeed.SeedIdentityRolesAsync(roleManager).Wait();
-            //ApplicationDbContextSeed.SeedIdentityUserAsync(userManager).Wait();
+            ApplicationDbContextSeed.SeedIdentityRolesAsync(roleManager).Wait();
+            ApplicationDbContextSeed.SeedIdentityUserAsync(userManager).Wait();
 
         }
     }

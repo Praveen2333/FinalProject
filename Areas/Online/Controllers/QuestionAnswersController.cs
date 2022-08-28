@@ -17,17 +17,18 @@ namespace LMS.Web.Areas.Online.Controllers
     {
         private readonly ApplicationDbContext _context;
        
-        public QuestionAnswersController(ApplicationDbContext context)
+        public QuestionAnswersController(ApplicationDbContext context, Microsoft.Extensions.Logging.ILogger<QuestionAnswersController> logger)
         {
             _context = context;
         }
 
         // GET: Online/QuestionAnswers
+        [Authorize(Roles = "AppAdmin")]
         public async Task<IActionResult> Index()
         {
             return View(await _context.QuestionAnswer.ToListAsync());
         }
-
+        [Authorize]
         public async Task<IActionResult> Index1()
         {
             return View(await _context.QuestionAnswer.ToListAsync());
@@ -156,6 +157,11 @@ namespace LMS.Web.Areas.Online.Controllers
         private bool QuestionAnswerExists(int id)
         {
             return _context.QuestionAnswer.Any(e => e.QuestionAnswerId == id);
+        }
+
+        public IActionResult DeleteQuestionAnswer(object result)
+        {
+            throw new NotImplementedException();
         }
     }
 }

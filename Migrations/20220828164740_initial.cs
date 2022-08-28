@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace LMS.Web.Migrations
 {
-    public partial class Addedcount : Migration
+    public partial class initial : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -79,11 +79,11 @@ namespace LMS.Web.Migrations
                     QuestionAnswerId = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Question = table.Column<string>(nullable: false),
-                    Option1 = table.Column<string>(nullable: true),
-                    Option2 = table.Column<string>(nullable: true),
-                    Option3 = table.Column<string>(nullable: true),
-                    Option4 = table.Column<string>(nullable: true),
-                    Answer = table.Column<string>(nullable: true)
+                    Option1 = table.Column<string>(nullable: false),
+                    Option2 = table.Column<string>(nullable: false),
+                    Option3 = table.Column<string>(nullable: false),
+                    Option4 = table.Column<string>(nullable: false),
+                    Answer = table.Column<string>(nullable: false)
                 },
                 constraints: table =>
                 {

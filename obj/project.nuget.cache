@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "4b1bSeng59c1R1GaqJSC1wyVzGrYIY609ZzXBpmjaxD6et/DtUmceS/KNBvDN4DtY3erzMy7zHqjOyL25c51/g==",
+  "dgSpecHash": "fmBYzxthcs5d4jzyAqSwp0s55vgXbuuq+fLoAaFPxuM+66Y/8asXQR1vyme8PWU2K0fbN1q8obE2TiR4BB9mSw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\LENOVO\\Source\\Repos\\Praveen2333\\FinalProject\\LMS.Web.csproj",
+  "projectFilePath": "C:\\Users\\LENOVO\\source\\repos\\Praveen2333\\FinalProject\\LMS.Web.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\LENOVO\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\3.1.28\\microsoft.aspnetcore.cryptography.internal.3.1.28.nupkg.sha512",
     "C:\\Users\\LENOVO\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\3.1.28\\microsoft.aspnetcore.cryptography.keyderivation.3.1.28.nupkg.sha512",

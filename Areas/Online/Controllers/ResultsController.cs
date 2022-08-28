@@ -42,6 +42,10 @@ namespace LMS.Web.Areas.Online.Controllers
         {
             return View(await _context.Results.ToListAsync());
         }
+        public async Task<IActionResult> AboutUs()
+        {
+            return View(await _context.Results.ToListAsync());
+        }
         // GET: Online/Results
         public async Task<IActionResult> Index1()
         {
