@@ -30,8 +30,16 @@ namespace LMS.Web.Areas.Online.Controllers
         {
             return View(await _context.Exams.ToListAsync());
         }
+        public async Task<IActionResult> Test()
+        {
+            return View(await _context.Exams.ToListAsync());
+        }
+        public async Task<IActionResult> Course()
+        {
+            return View(await _context.Exams.ToListAsync());
+        }
 
-    
+
         public async Task<IActionResult> Index1()
         {
             return View(await _context.Exams.ToListAsync());

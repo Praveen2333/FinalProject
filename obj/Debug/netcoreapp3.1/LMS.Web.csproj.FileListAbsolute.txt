@@ -495,3 +495,5 @@ C:\Users\LENOVO\Source\Repos\Praveen2333\FinalProject\obj\Debug\netcoreapp3.1\LM
 C:\Users\LENOVO\Source\Repos\Praveen2333\FinalProject\obj\Debug\netcoreapp3.1\LMS.Web.dll
 C:\Users\LENOVO\Source\Repos\Praveen2333\FinalProject\obj\Debug\netcoreapp3.1\LMS.Web.pdb
 C:\Users\LENOVO\Source\Repos\Praveen2333\FinalProject\obj\Debug\netcoreapp3.1\LMS.Web.genruntimeconfig.cache
+C:\Users\LENOVO\source\repos\Praveen2333\FinalProject\obj\Debug\netcoreapp3.1\Razor\Areas\Online\Views\Exams\Test.cshtml.g.cs
+C:\Users\LENOVO\source\repos\Praveen2333\FinalProject\obj\Debug\netcoreapp3.1\Razor\Areas\Online\Views\Exams\Course.cshtml.g.cs
